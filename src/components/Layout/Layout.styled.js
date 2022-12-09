@@ -3,10 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
   border-bottom: 1px solid black;
+  flex: 0 0 auto;
   /* position: fixed; */
   /* z-index: 100; */
   /* top: 0; */
   width: 100%;
+  padding: 12px;
   background: radial-gradient(
     circle,
     rgba(238, 174, 202, 1) 25%,
@@ -53,7 +55,11 @@ export const Footer = styled.footer`
   text-align: center;
   padding: 6px 12px;
   border-top: 3px solid #6a679e;
-  flex: 0 0 auto;
+
+  /* position: fixed;
+  bottom: 0;
+
+  width: 100%; */
 `;
 export const Text = styled.p`
   margin: 0;

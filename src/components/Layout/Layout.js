@@ -3,21 +3,13 @@ import { Suspense } from 'react';
 
 import * as SC from './Layout.styled';
 import { Loader } from '../Loader/Loader';
+import { AppBar } from '../AppBar/AppBar';
 
 export const Layout = () => {
   return (
     <SC.Container>
-      <SC.Header>
-        <SC.Section>
-          <SC.HeaderTitle>Hi, I’m your phonebook</SC.HeaderTitle>
-          {/* <SC.Nav>
-            <SC.StyledLink to="/" end>
-              Home
-            </SC.StyledLink>
-            <SC.StyledLink to="/movies">Movies</SC.StyledLink>
-          </SC.Nav> */}
-        </SC.Section>
-      </SC.Header>
+      <AppBar />
+     
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

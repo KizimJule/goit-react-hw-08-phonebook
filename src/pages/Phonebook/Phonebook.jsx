@@ -1,10 +1,10 @@
-import { Section } from '../components/Section/Section';
-import { ContactForm } from '../components/ContactForm/ContactForm';
-import { ContactList } from '../components/ContactList/ContactList';
-import { Filter } from '../components/Filter/Filter';
-import { Loader } from '../components/Loader/Loader';
+import { Section } from '../../components/Section/Section';
+import { ContactForm } from '../../components/ContactForm/ContactForm';
+import { ContactList } from '../../components/ContactList/ContactList';
+import { Filter } from '../../components/Filter/Filter';
+import { Loader } from '../../components/Loader/Loader';
 import { useSelector } from 'react-redux';
-import { selectIsLoading, selectError } from '../redux/selectors';
+import { selectIsLoading, selectError } from '../../redux/selectors';
 import { ContainerMain } from './phonebook.styled';
 
 export function Phonebook() {
