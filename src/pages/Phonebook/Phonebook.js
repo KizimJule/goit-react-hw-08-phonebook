@@ -7,20 +7,29 @@ import { useSelector } from 'react-redux';
 import { selectIsLoading, selectError } from '../../redux/selectors';
 import { ContainerMain } from './phonebook.styled';
 
+import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+
 export function Phonebook() {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
     <ContainerMain>
-      <Section title="Add contact in your phonebook">
-        <ContactForm />
-      </Section>
-      <Section title="Your contacts">
-        <Filter />
-        {isLoading && !error && <Loader />}
-        <ContactList />
-      </Section>
+      {isLoggedIn ? (
+        <>
+          <Section title="Add contact in your phonebook">
+            <ContactForm />
+          </Section>
+          <Section title="Your contacts">
+            <Filter />
+            {isLoading && !error && <Loader />}
+            <ContactList />
+          </Section>
+        </>
+      ) : (
+        <p>Please, enter your account or register </p>
+      )}
     </ContainerMain>
   );
 }
