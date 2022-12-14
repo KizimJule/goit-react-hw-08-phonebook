@@ -29,12 +29,12 @@ export const ContactList = () => {
 
       {filteredContacts.length > 0 && !error ? (
         <SC.ContactListUl>
-          {filteredContacts.map(({ name, phone, id }) => (
+          {filteredContacts.map(({ name, number, id }) => (
             <SC.ContactListLi key={id}>
               <SC.ContactCard>
                 <FcPhoneAndroid />
                 <SC.ContactTitle>
-                  {name}: {phone}
+                  {name}: {number}
                 </SC.ContactTitle>
               </SC.ContactCard>
 
