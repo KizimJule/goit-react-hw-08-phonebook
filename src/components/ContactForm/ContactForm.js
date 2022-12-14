@@ -50,7 +50,7 @@ export function ContactForm() {
       return;
     }
 
-    const newContact = { id: nanoid(), name, phone };
+    const newContact = { name, phone };
     dispatch(addContacts(newContact));
     reset();
   };
