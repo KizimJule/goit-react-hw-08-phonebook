@@ -3,16 +3,23 @@ import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { ContactList } from '../../components/ContactList/ContactList';
 import { Filter } from '../../components/Filter/Filter';
 import { Loader } from '../../components/Loader/Loader';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectIsLoading, selectError } from '../../redux/selectors';
 import { ContainerMain } from './phonebook.styled';
-
+import { useEffect } from 'react';
 import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+import { fetchContacts } from '../../redux/operations';
 
 export function Phonebook() {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const isLoggedIn = useSelector(selectIsLoggedIn);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <ContainerMain>
