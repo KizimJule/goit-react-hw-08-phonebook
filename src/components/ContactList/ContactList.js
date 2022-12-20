@@ -45,7 +45,9 @@ export const ContactList = () => {
           ))}
         </SC.ContactListUl>
       ) : (
-        !isLoading && <p>Not found any contact :( </p>
+        !isLoading && (
+          <SC.NotFoundText>Not found any contact :( </SC.NotFoundText>
+        )
       )}
 
       {/* <SC.ContactListUl>

@@ -15,7 +15,7 @@ export const FilterInput = styled.input`
   border: 2px solid #d1d1d4;
   background: #fff;
   padding: 8px;
-  font-weight: 700;
+  font-weight: 400;
   width: 200px;
   transition: 0.2s;
   &:hover,

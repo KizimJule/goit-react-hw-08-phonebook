@@ -12,6 +12,9 @@ export const UserMenuContainer = styled.div`
 `;
 export const UserTitle = styled.p`
   margin: 0;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
   @media (min-width: 1200px) {
     font-size: 20px;
   }

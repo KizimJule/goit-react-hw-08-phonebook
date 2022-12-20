@@ -11,11 +11,14 @@ export const AuthNavLink = styled(NavLink)`
   font-weight: 600;
   color: #034f84;
   cursor: pointer;
-
-  :hover,
-  :focus {
+  &.active {
+    color: #c83349;
+  }
+  :hover:not(.active),
+  :focus-visible:not(.active) {
     color: #7a3b2e;
   }
+
   @media (max-width: 768px) {
     font-size: 20px;
   }

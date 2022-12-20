@@ -3,8 +3,11 @@ import styled from 'styled-components';
 export const Screen = styled.div`
   background: linear-gradient(90deg, #5d54a4, #7c78b8);
   position: relative;
-  width: 300px;
+  width: 240px;
   box-shadow: 0px 0px 24px #5c5696;
+  /* @media (min-width: 480px) {
+    width: 300px;
+  } */
 `;
 export const ScreenContent = styled.div`
   z-index: 1;
@@ -13,8 +16,7 @@ export const ScreenContent = styled.div`
 `;
 
 export const Form = styled.form`
-  /* margin: 0 auto; */
-  width: 260px;
+  /* width: 260px; */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -35,14 +37,19 @@ export const Input = styled.input`
   border: 2px solid #d1d1d4;
   background: none;
   padding: 6px;
-  font-weight: 600;
-  width: 85%;
+  font-weight: 400;
   transition: 0.2s;
+  font-size: 12px;
+
   &:hover,
   &:focus,
   &:active {
     outline: none;
     border-color: #6a679e;
+  }
+
+  @media (min-width: 480px) {
+    width: 140px;
   }
 `;
 export const ButtonForm = styled.button`
@@ -76,36 +83,43 @@ export const ScreenBackground = styled.div`
   z-index: 0;
   -webkit-clip-path: inset(0 0 0 0);
   clip-path: inset(0 0 0 0);
+  overflow: hidden;
 `;
 export const ScreenBackgroundShape4 = styled.span`
-  transform: rotate(45deg);
-  position: absolute;
-  height: 400px;
-  width: 200px;
-  background: #7e7bb9;
-  top: 20px;
-  right: 50px;
-  border-radius: 60px;
+  @media (min-width: 480px) {
+    transform: rotate(45deg);
+    position: absolute;
+    height: 400px;
+    width: 200px;
+    background: #7e7bb9;
+    top: 20px;
+    right: 50px;
+    border-radius: 60px;
+  }
 `;
 export const ScreenBackgroundShape3 = styled.span`
-  transform: rotate(45deg);
-  position: absolute;
-  height: 400px;
-  width: 230px;
-  background: linear-gradient(270deg, #5d54a4, #6a679e);
-  top: -24px;
-  right: 0;
-  border-radius: 32px;
+  @media (min-width: 480px) {
+    transform: rotate(45deg);
+    position: absolute;
+    height: 400px;
+    width: 230px;
+    background: linear-gradient(270deg, #5d54a4, #6a679e);
+    top: -24px;
+    right: 0;
+    border-radius: 32px;
+  }
 `;
 export const ScreenBackgroundShape2 = styled.span`
-  transform: rotate(45deg);
-  position: absolute;
-  height: 220px;
-  width: 220px;
-  background: #6c63ac;
-  top: -172px;
-  right: 0;
-  border-radius: 32px;
+  @media (min-width: 480px) {
+    transform: rotate(45deg);
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    background: #6c63ac;
+    top: -172px;
+    right: 0;
+    border-radius: 32px;
+  }
 `;
 export const ScreenBackgroundShape1 = styled.span`
   transform: rotate(45deg);

@@ -1,8 +1,9 @@
+import { Section } from 'components/Section/Section';
 import { useDispatch } from 'react-redux';
 // import { useState } from 'react';
 import { register } from '../../redux/auth/authOperations';
 import * as SC from '../LoginForm/Form.styled';
-import * as SS from './RegisterForm.styled';
+// import * as SS from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -49,25 +50,27 @@ export const RegisterForm = () => {
 
   return (
     <SC.ContainerMain>
-      <SS.Section>
-        <>
-          <SC.Form onSubmit={handleSubmit} autoComplete="off">
-            <SC.LabelForm>
-              Username
-              <SC.InputForm type="text" name="name" />
-            </SC.LabelForm>
-            <SC.LabelForm>
-              Email
-              <SC.InputForm type="email" name="email" />
-            </SC.LabelForm>
-            <SC.LabelForm>
+      <Section title="Register">
+        <SC.Form onSubmit={handleSubmit} autoComplete="off">
+          <SC.LabelForm>
+            <SC.TextLabel>Username</SC.TextLabel>
+            <SC.InputForm type="text" name="name" />
+          </SC.LabelForm>
+          <SC.LabelForm>
+            <SC.TextLabel>Email</SC.TextLabel>
+
+            <SC.InputForm type="email" name="email" />
+          </SC.LabelForm>
+          <SC.LabelForm>
+            <SC.TextLabel>
               Password <SC.InfoSpan>(min 7 signs)</SC.InfoSpan>
-              <SC.InputForm type="password" name="password" />
-            </SC.LabelForm>
-            <SC.ButtonSubmit type="submit">Register</SC.ButtonSubmit>
-          </SC.Form>
-        </>
-      </SS.Section>
+            </SC.TextLabel>
+
+            <SC.InputForm type="password" name="password" />
+          </SC.LabelForm>
+          <SC.ButtonSubmit type="submit">Register</SC.ButtonSubmit>
+        </SC.Form>
+      </Section>
     </SC.ContainerMain>
   );
 };

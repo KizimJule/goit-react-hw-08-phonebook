@@ -10,7 +10,7 @@ export const Filter = () => {
 
   return (
     <SC.FilterLabel>
-      Find contacts by Name
+      Find contacts by name
       <SC.FilterInput
         type="text"
         name="filter"

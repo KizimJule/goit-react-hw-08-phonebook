@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { Section } from 'components/Section/Section';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 import * as SC from './Form.styled';
@@ -44,17 +44,21 @@ export const LoginForm = () => {
 
   return (
     <SC.ContainerMain>
-      <SC.Form onSubmit={handleSubmit} autoComplete="off">
-        <SC.LabelForm>
-          Email
-          <SC.InputForm type="email" name="email" />
-        </SC.LabelForm>
-        <SC.LabelForm>
-          Password <SC.InfoSpan>(min 7 signs)</SC.InfoSpan>
-          <SC.InputForm type="password" name="password" />
-        </SC.LabelForm>
-        <SC.ButtonSubmit type="submit">Log In</SC.ButtonSubmit>
-      </SC.Form>
+      <Section title="LogIn">
+        <SC.Form onSubmit={handleSubmit} autoComplete="off">
+          <SC.LabelForm>
+            <SC.TextLabel>Email</SC.TextLabel>
+            <SC.InputForm type="email" name="email" />
+          </SC.LabelForm>
+          <SC.LabelForm>
+            <SC.TextLabel>
+              Password <SC.InfoSpan>(min 7 signs)</SC.InfoSpan>
+            </SC.TextLabel>
+            <SC.InputForm type="password" name="password" />
+          </SC.LabelForm>
+          <SC.ButtonSubmit type="submit">Log In</SC.ButtonSubmit>
+        </SC.Form>
+      </Section>
     </SC.ContainerMain>
   );
 };

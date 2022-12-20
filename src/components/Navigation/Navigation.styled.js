@@ -5,6 +5,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   gap: 12px;
+
   @media (max-width: 479.9px) {
     flex-direction: column;
     align-items: flex-start;
@@ -17,6 +18,7 @@ export const StyledNavLink = styled(NavLink)`
   color: black;
   font-weight: 500;
   font-size: 18px;
+
   &.active {
     color: #c83349;
   }
