@@ -8,7 +8,7 @@ export const AuthNav = () => {
       <SC.AuthNavLink to="/register" element={<Register />}>
         Register
       </SC.AuthNavLink>
-      <SC.AuthNavLink to="/login">Log In</SC.AuthNavLink>
+      <SC.AuthNavLink to="/login">LogIn</SC.AuthNavLink>
     </SC.AuthNavContainer>
   );
 };

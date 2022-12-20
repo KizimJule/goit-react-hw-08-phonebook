@@ -6,7 +6,7 @@ export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
 `;
 export const Title = styled.h2`
   font-size: 24px;

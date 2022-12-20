@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { Phonebook } from 'pages/Phonebook/Phonebook';
 import * as SC from './Navigation.styled';
 import { useSelector } from 'react-redux';
@@ -9,13 +8,13 @@ export const Navigation = () => {
 
   return (
     <SC.NavContainer>
-      <NavLink to="/" end>
+      <SC.StyledNavLink to="/" end>
         Home
-      </NavLink>
+      </SC.StyledNavLink>
       {isLoggedIn && (
-        <NavLink to="/phonebook" element={<Phonebook />}>
+        <SC.StyledNavLink to="/phonebook" element={<Phonebook />}>
           Phonebook
-        </NavLink>
+        </SC.StyledNavLink>
       )}
     </SC.NavContainer>
   );

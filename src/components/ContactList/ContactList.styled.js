@@ -15,7 +15,7 @@ export const ContactListLi = styled.li`
   justify-content: space-between;
   border: 1px solid black;
   list-style-position: inside;
-  width: 420px;
+  width: 400px;
   padding: 8px;
 `;
 export const ContactTitle = styled.p`
