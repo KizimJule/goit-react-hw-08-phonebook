@@ -34,6 +34,7 @@ export const logIn = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      console.log(error);
       alert('Invalid email or password! Try again!');
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -65,6 +66,7 @@ export const refreshUser = createAsyncThunk(
       const { data } = await axios.get('users/current');
       return data;
     } catch (error) {
+      console.log('Invalid');
       thunkAPI.rejectWithValue(error.message);
     }
   }
