@@ -1,6 +1,6 @@
 import * as SC from './Homepage.styled';
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <SC.ContainerMain>
       <>
